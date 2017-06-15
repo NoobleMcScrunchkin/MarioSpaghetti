@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="2017" orientation="orthogonal" renderorder="right-down" width="250" height="24" tilewidth="32" tileheight="32" nextobjectid="39">
+<map version="2017" orientation="orthogonal" renderorder="right-down" width="250" height="24" tilewidth="32" tileheight="32" nextobjectid="48">
  <tileset firstgid="1" source="Set3.tsx"/>
  <layer name="Map" width="250" height="24">
   <data encoding="csv">
@@ -65,5 +65,14 @@
   <object id="36" name="block" x="4064" y="640" width="96" height="32"/>
   <object id="37" name="qblock" x="4992" y="576" width="64" height="32"/>
   <object id="38" name="block" x="5056" y="576" width="32" height="32"/>
+  <object id="39" name="enemy2" x="4800" y="672" width="32" height="32"/>
+  <object id="40" name="enemy2" x="4896" y="672" width="32" height="32"/>
+  <object id="41" name="enemy2" x="4992" y="672" width="32" height="32"/>
+  <object id="42" name="enemy2" x="5088" y="672" width="32" height="32"/>
+  <object id="43" name="enemy2" x="5312" y="672" width="32" height="32"/>
+  <object id="44" name="enemy2" x="5376" y="672" width="32" height="32"/>
+  <object id="45" name="enemy2" x="5440" y="672" width="32" height="32"/>
+  <object id="46" name="enemy2" x="5824" y="672" width="32" height="32"/>
+  <object id="47" name="enemy2" x="5888" y="672" width="32" height="32"/>
  </objectgroup>
 </map>

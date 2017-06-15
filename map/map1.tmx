@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="2017" orientation="orthogonal" renderorder="right-down" width="250" height="24" tilewidth="32" tileheight="32" backgroundcolor="#00aaff" nextobjectid="158">
+<map version="2017" orientation="orthogonal" renderorder="right-down" width="250" height="24" tilewidth="32" tileheight="32" backgroundcolor="#00aaff" nextobjectid="165">
  <tileset firstgid="1" source="Set1.tsx"/>
  <tileset firstgid="4513" source="question.tsx"/>
  <tileset firstgid="4514" source="Set2.tsx"/>
@@ -34,7 +34,7 @@
  </layer>
  <objectgroup name="Objects">
   <object id="2" name="block" x="0" y="736" width="2208" height="32"/>
-  <object id="7" name="player" x="96" y="672" width="32" height="32"/>
+  <object id="7" name="player" x="192" y="672" width="32" height="32"/>
   <object id="12" name="block" x="2272" y="736" width="480" height="32"/>
   <object id="13" name="block" x="2848" y="736" width="1952" height="32"/>
   <object id="16" name="block" x="672" y="608" width="32" height="32"/>
@@ -109,5 +109,12 @@
   <object id="155" name="enemy" x="5408" y="672" width="32" height="32"/>
   <object id="156" name="pole" x="6319" y="416" width="17" height="256"/>
   <object id="157" name="blue" x="81" y="293.5" width="2" height="1"/>
+  <object id="158" name="enemy2" x="1088" y="672" width="32" height="32"/>
+  <object id="159" name="enemy2" x="3968" y="672" width="32" height="32"/>
+  <object id="160" name="enemy2" x="6016" y="608" width="32" height="32"/>
+  <object id="161" name="enemy2" x="6112" y="608" width="32" height="32"/>
+  <object id="162" name="enemy2" x="6208" y="608" width="32" height="32"/>
+  <object id="163" name="enemy2" x="5568" y="672" width="32" height="32"/>
+  <object id="164" name="lives" x="32" y="704" width="32" height="32"/>
  </objectgroup>
 </map>

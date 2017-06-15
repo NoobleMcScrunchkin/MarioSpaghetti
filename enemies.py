@@ -7,7 +7,7 @@ vec = pg.math.Vector2
 #Enemy Code
 class Enemy(pg.sprite.Sprite):
     #Create the Enemy and add it to enemies group
-    def __init__(self, game, x, y):
+    def __init__(self, game, x, y, var):
         self.groups = game.all_sprites
         pg.sprite.Sprite.__init__(self, self.groups)
         self.game = game
@@ -21,11 +21,26 @@ class Enemy(pg.sprite.Sprite):
         self.pos = vec(x, y)
         self.acc = vec(0, 0)
 
-        self.load_images()
+        if var:
+            self.load_images2()
+        else:
+            self.load_images()
         self.rect = self.image.get_rect()
 
     #Load Enemy images
     def load_images(self):
+        self.standing_frame = self.game.spritesheet5.get_image(656, 32, 32, 32)
+        self.standing_frame.set_colorkey((255, 127, 39))
+
+        self.walk_frames_l = [self.game.spritesheet5.get_image(656, 32, 32, 32),
+                              self.game.spritesheet5.get_image(688, 32, 32, 32)]
+        self.walk_frames_r = []
+        for frame in self.walk_frames_l:
+            frame.set_colorkey((255, 127, 39))
+            self.walk_frames_r.append(pg.transform.flip(frame, True, False))
+
+    #Load Enemy images
+    def load_images2(self):
         self.standing_frame = self.game.spritesheet5.get_image(0, 16, 16, 16)
         self.standing_frame.set_colorkey((255, 127, 39))
 

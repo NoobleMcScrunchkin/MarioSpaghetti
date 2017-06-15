@@ -89,6 +89,7 @@ class Game:
         self.pipes = pg.sprite.Group()
         self.ends = pg.sprite.Group()
         self.poles = pg.sprite.Group()
+        self.liveblocks = pg.sprite.Group()
 
         #Create players and enemies based on where they are in the map. Also make the blocks where they are found on the map.
         for tile_object in self.map.tmxdata.objects:
@@ -108,7 +109,12 @@ class Game:
                 Obstacle(self, tile_object.x, tile_object.y, tile_object.width, tile_object.height, tile_object.name)
             #If the object is an enemy then make the enemy
             if tile_object.name == 'enemy':
-                Enemy(self, tile_object.x, tile_object.y)
+                Enemy(self, tile_object.x, tile_object.y, True)
+            if tile_object.name == 'enemy2':
+                Enemy(self, tile_object.x, tile_object.y, False)
+            if tile_object.name == 'lives':
+                Obstacle(self, tile_object.x, tile_object.y, tile_object.width, tile_object.height, tile_object.name)
+
 
         #Create the camera
         self.camera = Camera(self.map.width, self.map.height)
@@ -152,6 +158,9 @@ class Game:
         #Draws the coin and the score
         self.draw_text(str(self.score), 50, 50, 5, False)
         self.screen.blit(self.map.coin, (5,12))
+
+        #Draws the number of lives
+        self.draw_text(str(self.lives), 50, WIDTH/2, 30, True)
 
         #Play music when hitting the flagpole
         if self.player.hitpole == True or self.playernum == 2 and self.player2.hitpole == True:

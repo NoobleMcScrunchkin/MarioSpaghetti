@@ -259,6 +259,10 @@ class Player(pg.sprite.Sprite):
             if hits:
                 self.hitpole = True
 
+            hits = pg.sprite.spritecollide(self, self.game.liveblocks, False)
+            if hits:
+                self.game.lives += 1
+
             #Did the player enter a pipe
             hits = pg.sprite.spritecollide(self, self.game.pipes, False)
             if hits:
@@ -349,6 +353,8 @@ class Obstacle(pg.sprite.Sprite):
             self.groups = game.pipes
         elif tile == 'pole':
             self.groups = game.poles
+        elif tile == 'lives':
+            self.groups = game.liveblocks
         #Create invisible sprites
         pg.sprite.Sprite.__init__(self, self.groups)
         self.rect = pg.Rect(x, y, w, h)
