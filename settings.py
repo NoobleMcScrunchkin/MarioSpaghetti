@@ -1,0 +1,33 @@
+#Colours
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+DARKGREY = (40, 40, 40)
+LIGHTGREY = (100, 100, 100)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
+YELLOW = (255, 255, 0)
+
+#Window options
+WIDTH = 1280
+HEIGHT = 720
+FPS = 60
+TITLE = "Mario Spaghetti"
+BGCOLOUR = (0, 162, 232)
+
+#Player settings
+PLAYER_ACC = 1
+PLAYER_FRICTION = -0.1
+PLAYER_GRAV = 0.8
+PLAYER_JUMP = 15
+
+#Spritesheets
+SPRITESHEET = "sheet.png"
+SPRITESHEET2 = "sheet2.png"
+SPRITESHEET3 = "sheet3.png"
+SPRITESHEET4 = "sheet4.png"
+SPRITESHEET5 = "sheet7.png"
+
+#Tile options
+TILESIZE = 32
+GRIDWIDTH = WIDTH / TILESIZE
+GRIDHEIGHT = HEIGHT / TILESIZE
