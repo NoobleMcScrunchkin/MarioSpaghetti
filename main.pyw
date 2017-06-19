@@ -43,12 +43,9 @@ class Game:
             MAP = 'map' + str(self.level) + '.tmx'
 
         #Loads and renders the map, or closes the game if there are no more levels111
-        try:
-            self.map = TiledMap(path.join(map_folder, MAP))
-            self.map_img = self.map.make_map()
-            self.map_rect = self.map_img.get_rect()
-        except:
-            self.quit()
+        self.map = TiledMap(path.join(map_folder, MAP))
+        self.map_img = self.map.make_map()
+        self.map_rect = self.map_img.get_rect()
 
         #Load the spritesheets
         self.spritesheet = Spritesheet(path.join(self.img_folder, SPRITESHEET))
