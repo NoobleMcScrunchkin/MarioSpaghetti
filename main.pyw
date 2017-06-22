@@ -1,7 +1,14 @@
 #Imports
-import pygame as pg
 import sys
-import pytmx
+from os import path
+from subprocess import Popen
+try:
+    import pygame as pg
+    import pytmx
+except:
+    game_folder = path.dirname(__file__)
+    bat = Popen(path.join(game_folder, "requirements.bat"))
+    sys.exit()
 from os import path
 from settings import *
 from sprites import *
