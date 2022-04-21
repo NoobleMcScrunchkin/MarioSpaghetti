@@ -25,7 +25,7 @@ class Game:
         pg.init()
         pg.mixer.init()
         #Set Screen Size
-        self.screen = pg.display.set_mode((WIDTH, HEIGHT), pg.FULLSCREEN, 32)
+        self.screen = pg.display.set_mode((WIDTH, HEIGHT), pg.SHOWN, 32)
         #Set Windows Title
         pg.display.set_caption(TITLE)
         #Set FPS

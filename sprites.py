@@ -248,11 +248,12 @@ class Player(pg.sprite.Sprite):
 
             #Next three are for detecting where the player is on the flagpole
             hits = pg.sprite.spritecollide(self, self.game.fblocks, False)
-            if hits:
+            if hits: 
                 self.finished = True
 
             hits = pg.sprite.spritecollide(self, self.game.ends, False)
             if hits:
+                print(1)
                 self.stopped = True
 
             hits = pg.sprite.spritecollide(self, self.game.poles, False)
